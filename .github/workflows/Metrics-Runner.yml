@@ -21,32 +21,32 @@ jobs:
     
     -name: Metrics classic
     if: ${{ success() || failure() }}
-    use: lowlighter/metrics@latest
+    use: lowlighter/metrics@master
     with:
-          # Your filename
-          filename: img/metrics.classic.svg
-          # Your GitHub token
-          token: ${{ secrets.METRICS_TOKEN }}
-          # Options
-          user: felixhollitzer
-          template: classic
-          base: ""
-          config_timezone: Europe/Berlin
-          repositories: 1000
-          output_action: pull-request
+      # Your filename
+      filename: img/metrics.classic.svg
+      # Your GitHub token
+      token: ${{ secrets.METRICS_TOKEN }}
+      # Options
+      user: felixhollitzer
+      template: classic
+      base: ""
+      config_timezone: Europe/Berlin
+      repositories: 1000
+      output_action: pull-request
 
     -name: Metrics terminal
     if: ${{ success() || failure() }}
-    use: lowlighter/metrics@latest
+    use: lowlighter/metrics@master
     with:
-          # Your filename
-          filename: img/metrics.terminal.svg
-          # Your GitHub token
-          token: ${{ secrets.METRICS_TOKEN }}
-          # Options
-          user: felixhollitzer
-          template: terminal
-          base: header, activity, community, repositories, metadata
-          config_timezone: Europe/Berlin
-          repositories: 1000
-          output_action: pull-request
+      # Your filename
+      filename: img/metrics.terminal.svg
+      # Your GitHub token
+      token: ${{ secrets.METRICS_TOKEN }}
+      # Options
+      user: felixhollitzer
+      template: terminal
+      base: header, activity, community, repositories, metadata
+      config_timezone: Europe/Berlin
+      repositories: 1000
+      output_action: pull-request
