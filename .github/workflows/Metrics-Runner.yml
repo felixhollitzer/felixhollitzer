@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  metrics_personal:
+  github-metrics-personal:
     runs-on: ubuntu-latest
 
     steps:
