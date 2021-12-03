@@ -18,7 +18,7 @@ jobs:
     
     - name: Metrics classic
     if: ${{ success() || failure() }}
-    uses: lowlighter/metrics@master
+    use: lowlighter/metrics@master
     with:
       # Your filename
       filename: img/metrics.classic.svg
