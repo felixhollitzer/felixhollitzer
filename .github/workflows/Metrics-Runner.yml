@@ -23,7 +23,7 @@ jobs:
         # Options
         user: felixhollitzer
         template: classic
-        base: ""
+        base: header, activity, community, repositories, metadata
         config_timezone: Europe/Berlin
         repositories: 1000
         output_action: pull-request
@@ -40,7 +40,7 @@ jobs:
         # Options
         user: felixhollitzer
         template: terminal
-        base: ""
+        base: header, activity, community, repositories, metadata
         config_timezone: Europe/Berlin
         repositories: 1000
         output_action: pull-request-squash
