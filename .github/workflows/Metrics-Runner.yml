@@ -8,11 +8,11 @@ on:
 
 
 jobs:
-  github-metrics-personal:
+  metrics-personal:
     runs-on: ubuntu-latest
 
     steps:
-    
+
     #==================================================#
     #                   Template                       #
     #==================================================#
