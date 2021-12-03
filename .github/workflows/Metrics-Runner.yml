@@ -5,7 +5,7 @@ name: Metrics-Runner
 on:
   schedule:
     - cron: '0 */6 * * *'
-  workflow_dispatch:
+  #workflow_dispatch:
 
 jobs:
   github-metrics-personal:
@@ -13,10 +13,6 @@ jobs:
 
     steps:
 
-    #==================================================#
-    #                   Template                       #
-    #==================================================#
-    
     - name: Metrics classic
      if: ${{ success() || failure() }}
      uses: lowlighter/metrics@master
