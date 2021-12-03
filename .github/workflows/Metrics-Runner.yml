@@ -13,12 +13,12 @@ jobs:
     steps:
 
     - name: Metrics classic
-     if: ${{ success() || failure() }}
-     uses: lowlighter/metrics@master
-     with:
-       # Your filename
-       filename: img/metrics.classic.svg
-       # Your GitHub token
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/metrics.classic.svg
+        # Your GitHub token
         token: ${{ secrets.METRICS_TOKEN }}
         # Options
         user: felixhollitzer
@@ -35,12 +35,12 @@ jobs:
       with:
         # Your filename
         filename: img/metrics.terminal.svg
-       # Your GitHub token
-       token: ${{ secrets.METRICS_TOKEN }}
-       # Options
-       user: felixhollitzer
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
         template: terminal
-       base: ""
-       config_timezone: Europe/Berlin
-       repositories: 1000
+        base: ""
+        config_timezone: Europe/Berlin
+        repositories: 1000
         output_action: pull-request-squash
