@@ -5,7 +5,7 @@ name: Metrics-Runner
 on:
   schedule:
     - cron: "0 */6 * * *"
-    
+
   workflow_dispatch:
 jobs:
   github-metrics-personal:
@@ -18,7 +18,7 @@ jobs:
     
     - name: Metrics classic
     if: ${{ success() || failure() }}
-    use: lowlighter/metrics@master
+    uses: lowlighter/metrics@master
     with:
       # Your filename
       filename: img/metrics.classic.svg
@@ -35,7 +35,7 @@ jobs:
 
     - name: Metrics terminal
     if: ${{ success() || failure() }}
-    use: lowlighter/metrics@master
+    uses: lowlighter/metrics@master
     with:
       # Your filename
       filename: img/metrics.terminal.svg
