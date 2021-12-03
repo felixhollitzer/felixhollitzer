@@ -6,7 +6,6 @@ on:
   schedule:
     - cron: "0 */6 * * *"
 
-
 jobs:
   metrics-personal:
     runs-on: ubuntu-latest
