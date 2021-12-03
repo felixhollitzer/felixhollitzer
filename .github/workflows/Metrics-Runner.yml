@@ -19,7 +19,7 @@ jobs:
     #                   Template                       #
     #==================================================#
     
-    -name: Metrics classic
+    - name: Metrics classic
     if: ${{ success() || failure() }}
     use: lowlighter/metrics@master
     with:
@@ -36,7 +36,7 @@ jobs:
       output_action: pull-request
 
 
-    -name: Metrics terminal
+    - name: Metrics terminal
     if: ${{ success() || failure() }}
     use: lowlighter/metrics@master
     with:
