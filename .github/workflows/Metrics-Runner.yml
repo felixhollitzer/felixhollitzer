@@ -82,7 +82,7 @@ jobs:
         output_action: pull-request-squash
 
     - name: Coding habits
-    if: ${{ success() || failure() }}
+      if: ${{ success() || failure() }}
       uses: lowlighter/metrics@master
       with:
         # Your filename
