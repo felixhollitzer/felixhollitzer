@@ -43,7 +43,7 @@ jobs:
         base: header, activity, community, repositories, metadata
         config_timezone: Europe/Berlin
         repositories: 1000
-        output_action: pull-request #-squash
+        output_action: pull-request
 
     - name: Isometric calendar (half-year)
       if: ${{ success() || failure() }}
@@ -79,5 +79,5 @@ jobs:
         plugin_isocalendar: yes
         plugin_isocalendar_duration: full-year
         repositories: 1000
-        output_action: pull-request
+        output_action: pull-request-squash
 
