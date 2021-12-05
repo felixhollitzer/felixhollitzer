@@ -43,4 +43,41 @@ jobs:
         base: header, activity, community, repositories, metadata
         config_timezone: Europe/Berlin
         repositories: 1000
-        output_action: pull-request-squash
+        output_action: pull-request #-squash
+
+    - name: Isometric calendar (half-year)
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/half-year.isometric.cal.svg
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
+        template: classic
+        base: ""
+        config_timezone: Europe/Berlin
+        plugin_isocalendar: yes
+        plugin_isocalendar_duration: half-year
+        repositories: 1000
+        output_action: pull-request
+
+    - name: Isometric calendar (full-year)
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/half-year.isometric.cal.svg
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
+        template: classic
+        base: ""
+        config_timezone: Europe/Berlin
+        plugin_isocalendar: yes
+        plugin_isocalendar_duration: full-year
+        repositories: 1000
+        output_action: pull-request
+
