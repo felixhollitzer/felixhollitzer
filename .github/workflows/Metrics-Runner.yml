@@ -50,7 +50,7 @@ jobs:
       uses: lowlighter/metrics@master
       with:
         # Your filename
-        filename: img/half-year.isometric.cal.svg
+        filename: img/cal.isometric.half-year.svg
         # Your GitHub token
         token: ${{ secrets.METRICS_TOKEN }}
         # Options
@@ -68,7 +68,7 @@ jobs:
       uses: lowlighter/metrics@master
       with:
         # Your filename
-        filename: img/full-year.isometric.cal.svg
+        filename: img/cal.isometric.full-year.svg
         # Your GitHub token
         token: ${{ secrets.METRICS_TOKEN }}
         # Options
@@ -80,4 +80,61 @@ jobs:
         plugin_isocalendar_duration: full-year
         repositories: 1000
         output_action: pull-request-squash
+
+    - name: Coding habits
+    if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/habits.svg
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
+        template: classic
+        base: ""
+        config_timezone: Europe/Berlin
+        plugin_habits: yes
+        plugin_habits_days: 14
+        plugin_habits_facts: yes
+        plugin_habits_from: 200
+        repositories: 1000
+
+    - name: Achivements X
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/achivements.x.svg
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
+          template: classic
+          base: ""
+          config_timezone: Europe/Berlin
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: X
+          repositories: 1000
+
+    - name: Achivements
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/achivements.svg
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
+          template: classic
+          base: ""
+          config_timezone: Europe/Berlin
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: C
+          repositories: 1000
+
 
