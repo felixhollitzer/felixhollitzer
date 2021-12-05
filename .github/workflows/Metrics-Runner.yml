@@ -68,7 +68,7 @@ jobs:
       uses: lowlighter/metrics@master
       with:
         # Your filename
-        filename: img/half-year.isometric.cal.svg
+        filename: img/full-year.isometric.cal.svg
         # Your GitHub token
         token: ${{ secrets.METRICS_TOKEN }}
         # Options
