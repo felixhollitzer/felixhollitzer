@@ -138,6 +138,27 @@ jobs:
         plugin_achievements_display: detailed
         plugin_achievements_threshold: C
         repositories: 1000
+        output_action: pull-request
+
+    - name: WakaTime
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@master
+      with:
+        # Your filename
+        filename: img/wakatime.svg
+        # Your GitHub token
+        token: ${{ secrets.METRICS_TOKEN }}
+        # Options
+        user: felixhollitzer
+        template: classic
+        base: header, activity, community, repositories, metadata
+        config_timezone: Europe/Berlin
+        plugin_wakatime: yes
+        plugin_wakatime_days: 7
+        plugin_wakatime_limit: 5
+        plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+        plugin_wakatime_url: https://wakatime.com
+        plugin_wakatime_user: current
         output_action: pull-request-squash
 
 
